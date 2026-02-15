@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — OSC-MUST</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="site-wrapper">
+
+    <nav class="nav">
+      <div class="nav-inner">
+        <div class="nav-left">
+          <a href="index.html" class="nav-prompt">
+            <span class="bracket">[</span>user@osc-must ~<span class="bracket">]$</span>
+          </a>
+          <div class="nav-links">
+            <a href="about.html"  class="nav-link">./about</a>
+            <a href="blog.html"   class="nav-link active">./blog</a>
+            <a href="events.html" class="nav-link">./events</a>
+            <a href="team.html"   class="nav-link">./team</a>
+            <a href="join.html"   class="nav-link">./join</a>
+          </div>
+        </div>
+        <span class="lang-toggle">EN</span>
+      </div>
+    </nav>
+
+    <main>
+      <div class="container py-12" id="scroll-root">
+        <p class="page-header">[user@osc-must ~]$ ls -la ./blog/</p>
+
+        <div class="reveal table-wrap">
+          <table class="terminal-table">
+            <thead>
+              <tr>
+                <th>perms</th>
+                <th>lang</th>
+                <th>date</th>
+                <th>filename</th>
+                <th>title</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="c-muted">-rw-r--r--</td>
+                <td class="c-accent">en/ar</td>
+                <td class="c-muted">2025-01-15</td>
+                <td><a href="blog/why-free-software.html" class="c-primary">why-free-software.md</a></td>
+                <td class="c-fg">Why we must insist on free software</td>
+              </tr>
+              <tr>
+                <td class="c-muted">-rw-r--r--</td>
+                <td class="c-accent">en/ar</td>
+                <td class="c-muted">2025-01-10</td>
+                <td><a href="blog/what-is-floss.html" class="c-primary">what-is-floss.md</a></td>
+                <td class="c-fg">F L O S S — Free/Libre Open Source Software</td>
+              </tr>
+              <tr>
+                <td class="c-muted">-rw-r--r--</td>
+                <td class="c-accent">en/ar</td>
+                <td class="c-muted">2025-01-05</td>
+                <td><a href="blog/launch-statement.html" class="c-primary">launch-statement.md</a></td>
+                <td class="c-fg">OSC-MUST is live</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <span>/home/OSC-MUST</span>
+        <span>Misr University for Science and Technology</span>
+      </div>
+    </footer>
+
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
+<!-- Written by ELBULBOL -->
