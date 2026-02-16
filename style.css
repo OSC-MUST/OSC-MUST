@@ -26,9 +26,11 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
+  overflow-x: hidden;
   background: var(--bg);
   color: var(--fg);
   font-family: 'JetBrains Mono', 'IBM Plex Mono', 'Courier New', monospace;
@@ -99,6 +101,8 @@ body::after {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 main {
@@ -126,6 +130,8 @@ main {
   background: rgba(8, 8, 8, 0.95);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .nav-inner {
@@ -137,6 +143,8 @@ main {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 0.5rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .nav-left {
@@ -145,6 +153,8 @@ main {
   gap: 0.3rem;
   flex-wrap: wrap;
   font-size: 1.05rem;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .nav-prompt {
@@ -163,6 +173,7 @@ main {
   align-items: center;
   gap: 0.9rem;
   margin-left: 0.6rem;
+  flex-wrap: wrap;
 }
 
 .nav-link {
@@ -185,6 +196,23 @@ main {
   opacity: 0.4;
 }
 
+/* --- Mobile Nav Fix --- */
+@media (max-width: 480px) {
+  .nav-left {
+    font-size: 0.9rem;
+  }
+  .nav-links {
+    gap: 0.5rem;
+    margin-left: 0;
+  }
+  .nav-link {
+    font-size: 0.9rem;
+  }
+  .nav-prompt {
+    font-size: 0.9rem;
+  }
+}
+
 /* --- Footer --- */
 .footer {
   border-top: 1px solid var(--border);
@@ -198,6 +226,8 @@ main {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  width: 100%;
+  box-sizing: border-box;
   justify-content: space-between;
   gap: 0.6rem;
   font-size: 0.9rem;
@@ -411,6 +441,7 @@ svg.pixel-logo {
   padding: 0.6rem 1.2rem;
   font-size: 1.05rem;
   transition: border-color 0.2s, color 0.2s;
+  min-width: 0;
 }
 .link-row:hover {
   border-color: var(--primary);
@@ -418,10 +449,15 @@ svg.pixel-logo {
 }
 .link-row .tag {
   color: var(--accent-fg);
+  flex-shrink: 0;
 }
 .link-row .url {
   color: var(--muted-fg);
   flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
 }
 
 .link-list {
