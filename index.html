@@ -8,6 +8,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/JetBrainsMono/Bold/JetBrainsMonoNerdFont-Bold.woff2" rel="preload" as="font" type="font/woff2" crossorigin />
+  <style>
+    @font-face {
+      font-family: 'JetBrainsMono Nerd Font';
+      src: url('https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@4.5.0/index.min.css');
+      font-weight: 400;
+    }
+  </style>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -38,9 +46,8 @@
         <div class="corner-ring bottom-left"></div>
         <div class="corner-ring bottom-right"></div>
 
-        <!-- OSC Logo -->
         <div class="logo-wrap">
-          <img src="assets/OSC_logo.webp" alt="OSC-MUST Logo" class="site-logo" fetchpriority="high" />
+          <img src="assets/OSC_logo.webp" alt="OSC-MUST Logo" class="site-logo" />
         </div>
 
         <h1 class="hero-title">MUST Open Source Community</h1>
@@ -143,17 +150,11 @@
             <span class="url">https://github.com/OSC-MUST</span>
             <span>→</span>
           </a>
-          <a href="https://discord.gg/YNg7eghVE2" target="_blank" rel="noopener noreferrer" class="link-row">
-            <span class="tag">[&nbsp;DC&nbsp;]</span>
-            <span class="url">https://discord.gg/YNg7eghVE2</span>
-            <span>→</span>
-          </a>
         </div>
       </section>
 
     </main>
 
-    <!--  FOOTER  -->
     <footer class="footer">
       <div class="footer-inner">
         <span>/home/OSC-MUST</span>
@@ -163,9 +164,7 @@
 
   </div>
 
-  <!--  SCRIPTS  -->
-
-  <script src="app.js"></script> <!-- ik you fucking hate js but it simple so we can get some smoth  animation -->
+  <script src="app.js"></script>
 </body>
 </html>
 <!-- Written by ELBULBOL -->

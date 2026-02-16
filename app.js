@@ -9,10 +9,11 @@
   /* ── Typing Effect ─────────────────────────────────────────────── */
   var el = document.getElementById('typing-text');
   if (el) {
-    var phrases = [
-      'We build. We share. We libre.',
-      'Free as in freedom, not free beer.'
-    ];
+    var phrases = ['We build. We share. We libre.', 'Free as in freedom, not free beer.'];
+    try {
+      var attr = el.getAttribute('data-phrases');
+      if (attr) { var parsed = JSON.parse(attr); if (parsed.length) phrases = parsed; }
+    } catch (e) {}
     var phraseIdx = 0;
     var charIdx = 0;
     var deleting = false;
